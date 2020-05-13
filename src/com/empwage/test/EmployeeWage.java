@@ -10,10 +10,10 @@ public class EmployeeWage
 	{
 
 		System.out.println("Welcome to Employee Wage Computation Program");
-		Employee employee=new Employee();
+		Employee employee=new Employee(20,8);
 		ManageEmployee manageemployee=new ManageEmployee();
 		System.out.println(manageemployee.EmployeePresent(employee) ? "Employee is Present" : "Employee is Absent");
-
+		System.out.println("Daily wage of employee is " +manageemployee.EmployeeDailyWage(employee));
 	}
 
 }

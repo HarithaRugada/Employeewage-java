@@ -6,9 +6,17 @@ public class Employee
 	private String empName;
 	private boolean isPresent;
 	private boolean isParttime;
+	private int wagePerHour;
 	private int dailyWage;
 	private int monthWage;
-	private int totalWorkhours;
+	private int workHours;
+
+	public Employee(int wagePerHour,int workHours)
+	{
+		this.wagePerHour=wagePerHour;
+		this.workHours=workHours;
+	}
+
 
 	public int getEmpId()
 	{
@@ -30,6 +38,11 @@ public class Employee
 		return this.isParttime;
 	}
 
+	public int getWagePerHour()
+	{
+		return this.wagePerHour;
+	}
+
 	public int getDailyWage()
 	{
 		return this.dailyWage;
@@ -40,9 +53,9 @@ public class Employee
 		return this.monthWage;
 	}
 
-	public int getTotalWorkhours()
+	public int getWorkHours()
 	{
-		return this.totalWorkhours;
+		return this.workHours;
 	}
 
 
@@ -66,6 +79,11 @@ public class Employee
 		this.isParttime=isParttime;
 	}
 
+	public void setWagePerHour(int wagePerHour)
+	{
+		this.wagePerHour=wagePerHour;
+	}
+
 	public void setDailyWage(int dailyWage)
 	{
 		this.dailyWage=dailyWage;
@@ -76,9 +94,9 @@ public class Employee
 		this.monthWage=monthWage;
 	}
 
-	public void setTotalWorkhours(int totalWorkhours)
+	public void setWorkHours(int WorkHours)
 	{
-		this.totalWorkhours=totalWorkhours;
+		this.workHours=workHours;
 	}
 
 }
