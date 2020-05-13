@@ -5,5 +5,4 @@ do
 	echo $file
 done
 
-java -classpath ./classes/ com/addressbook/$1
-
+java -classpath ./classes/ com/empwage/$1
