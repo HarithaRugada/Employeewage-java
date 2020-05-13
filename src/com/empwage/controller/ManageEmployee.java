@@ -6,7 +6,7 @@ import java.util.*;
 
 public class ManageEmployee
 {
-	public boolean EmployeePresent(Employee employee)
+	public void EmployeePresent(Employee employee)
 	{
 
 		int presentStatus=(int)(Math.random()*10)%2;
@@ -14,43 +14,65 @@ public class ManageEmployee
 		employee.setIsPresent(true);
 
 		if (presentStatus==1)
+		{
 			employee.setIsPresent(true);
-		else
-			employee.setIsPresent(false);
+			System.out.println("Employee is Present");
+		}
 
-		return employee.getIsPresent();
+		else
+		{
+			employee.setIsPresent(false);
+			System.out.println("Employee is Absent");
+		}
+
 
 	}
 
-	public int EmployeeDailyWage(Employee employee)
+	public void EmployeeDailyWage(Employee employee)
 	{
 
-		//boolean isPresent=EmployeePresent(employee);
 		employee.setDailyWage(0);
+
 		if(employee.getIsPresent()==true)
+		{
 			employee.setDailyWage(employee.getWagePerHour()*employee.getWorkHours());
+			System.out.println("Daily wage of employee is " +employee.getDailyWage());
+	                System.out.println("Hours Worked "+employee.getWorkHours());
+		}
+
 		else
+		{
 			employee.setDailyWage(0);
-		return employee.getDailyWage();
+			System.out.println("Daily wage of employee is zero as the employee is absent");
+        	        System.out.println("Hours Worked is also zero");
+		}
 
 	}
 
-	public boolean EmployeeParttime(Employee employee)
+	public void EmployeeParttime(Employee employee)
 	{
 
 		if(employee.getIsPresent()==true)
 		{
 
-			if(employee.getWorkHours()<8)
+			if(employee.getWorkHours()<=8)
+			{
 				employee.setIsParttime(true);
+				System.out.println("Partime employee");
+				System.out.println("Hours Worked "+employee.getWorkHours());
+			}
+
 			else
+			{
 				employee.setIsParttime(false);
-
+				System.out.println("Fulltime employee");
+				System.out.println("Hours Worked "+employee.getWorkHours());
+			}
 		}
-		else
-			employee.setIsParttime(true);
 
-		return employee.getIsParttime();
+		else
+			System.out.println("Neither parttime nor fulltime since the employee is absent");
+
 
 	}
 }
