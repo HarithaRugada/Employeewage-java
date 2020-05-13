@@ -75,4 +75,22 @@ public class ManageEmployee
 
 
 	}
+
+	public void EmployeeMonthWage(Employee employee)
+	{
+		employee.setMonthWage(0);
+		for(int i=1;i<=20;i++)
+		{
+			int presentStatus=(int)(Math.random()*10)%2;
+		        if (presentStatus==1)
+			{
+				int workHour=(int)(Math.random()*10);
+				System.out.println("Employee is present on Day "+i);
+				System.out.println("Hours Worked : "+(workHour));
+				employee.setMonthWage(employee.getMonthWage()+(employee.getWagePerHour()*workHour));
+			}
+		}
+		System.out.println("Total Month Wage : "+employee.getMonthWage());
+		System.out.println("Total hours worked : "+(employee.getMonthWage()/20));
+	}
 }
