@@ -9,6 +9,7 @@ public class ManageEmployee
 
 		int presentStatus=(int)(Math.random()*10)%2;
 		System.out.println(presentStatus);
+		employee.setIsPresent(true);
 
 		if (presentStatus==1)
 			employee.setIsPresent(true);
@@ -19,4 +20,16 @@ public class ManageEmployee
 
 	}
 
+	public int EmployeeDailyWage(Employee employee)
+	{
+
+		//boolean isPresent=EmployeePresent(employee);
+		employee.setDailyWage(0);
+		if(employee.getIsPresent()==true)
+			employee.setDailyWage(employee.getWagePerHour()*employee.getWorkHours());
+		else
+			employee.setDailyWage(0);
+		return employee.getDailyWage();
+
+	}
 }
