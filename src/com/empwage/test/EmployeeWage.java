@@ -20,6 +20,7 @@ public class EmployeeWage
 		System.out.println("2.Get the daily wage of the employee");
 		System.out.println("3.Check whether the employee is working parttime or fulltime");
 		System.out.println("4.Calculate the monthly wage");
+		System.out.println("5.Check the condition of 100 working hours or 20 days");
 		int choice=Sc.nextInt();
 		switch(choice)
 		{
@@ -39,6 +40,10 @@ public class EmployeeWage
 
 			case 4:
 				manageemployee.EmployeeMonthWage(employee);
+				break;
+
+			case 5:
+				manageemployee.EmployeeCondition(employee);
 				break;
 
 			default:
