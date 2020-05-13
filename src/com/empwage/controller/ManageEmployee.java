@@ -93,4 +93,32 @@ public class ManageEmployee
 		System.out.println("Total Month Wage : "+employee.getMonthWage());
 		System.out.println("Total hours worked : "+(employee.getMonthWage()/20));
 	}
+
+	public void EmployeeCondition(Employee employee)
+	{
+		int days=1;
+		int totalWorkhours=0;
+		while(days<20 && totalWorkhours<100)
+		{
+			int presentStatus=(int)(Math.random()*10)%2;
+                        if (presentStatus==1)
+                        {
+                                int workHour=(int)(Math.random()*10);
+				if((totalWorkhours+workHour)<100)
+                                {
+					days+=1;
+					System.out.println("Employee is present on Day "+days);
+                                	System.out.println("Hours Worked : "+(workHour));
+                                	totalWorkhours+=workHour;
+				}
+
+			}
+
+
+		}
+		System.out.println("Total hours Worked : "+totalWorkhours);
+		System.out.println("Total days worked : "+days);
+
+	}
+
 }
