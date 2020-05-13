@@ -2,6 +2,8 @@ package com.empwage.controller;
 
 import com.empwage.model.*;
 
+import java.util.*;
+
 public class ManageEmployee
 {
 	public boolean EmployeePresent(Employee employee)
@@ -30,6 +32,25 @@ public class ManageEmployee
 		else
 			employee.setDailyWage(0);
 		return employee.getDailyWage();
+
+	}
+
+	public boolean EmployeeParttime(Employee employee)
+	{
+
+		if(employee.getIsPresent()==true)
+		{
+
+			if(employee.getWorkHours()<8)
+				employee.setIsParttime(true);
+			else
+				employee.setIsParttime(false);
+
+		}
+		else
+			employee.setIsParttime(true);
+
+		return employee.getIsParttime();
 
 	}
 }
