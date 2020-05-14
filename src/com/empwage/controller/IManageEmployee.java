@@ -9,7 +9,7 @@ public interface IManageEmployee
 	public void EmployeeDailyWage(Employee employee);
 	public void EmployeeParttime(Employee employee);
 	public void EmployeeMonthWage(Employee employee);
-	public void EmployeeCondition(Employee employee);
+	//public void EmployeeCondition(Employee employee);
 
 
 }
