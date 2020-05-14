@@ -5,12 +5,12 @@ import com.empwage.controller.*;
 
 import java.util.*;
 
-public class SampleManageEmployee implements IManageEmployee
+public class ABCManageEmployee implements IManageEmployee
 {
 
-	private static final int empId=1;
-	private static final int wagePerHour=20;
-	private static final int workHours=8;
+	private static final int empId=12;
+	private static final int wagePerHour=25;
+	private static final int workHours=7;
 
 	public void EmployeePresent(Employee employee)
 	{
