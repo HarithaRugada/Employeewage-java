@@ -8,7 +8,7 @@ import java.util.*;
 public class ABCManageEmployee implements IManageEmployee
 {
 
-	private static final int empId=12;
+	//private static final int empId=12;
 	private static final int wagePerHour=25;
 	private static final int workHours=7;
 
@@ -41,9 +41,9 @@ public class ABCManageEmployee implements IManageEmployee
 
 		if(employee.getIsPresent()==true)
 		{
-			employee.setDailyWage(employee.getWagePerHour()*employee.getWorkHours());
+			employee.setDailyWage(wagePerHour*workHours);
 			System.out.println("Daily wage of employee is " +employee.getDailyWage());
-	                System.out.println("Hours Worked "+employee.getWorkHours());
+	                System.out.println("Hours Worked " +workHours);
 		}
 
 		else
@@ -61,18 +61,18 @@ public class ABCManageEmployee implements IManageEmployee
 		if(employee.getIsPresent()==true)
 		{
 
-			if(employee.getWorkHours()<=8)
+			if(workHours<=8)
 			{
 				employee.setIsParttime(true);
 				System.out.println("Partime employee");
-				System.out.println("Hours Worked "+employee.getWorkHours());
+				System.out.println("Hours Worked "+workHours);
 			}
 
 			else
 			{
 				employee.setIsParttime(false);
 				System.out.println("Fulltime employee");
-				System.out.println("Hours Worked "+employee.getWorkHours());
+				System.out.println("Hours Worked "+workHours);
 			}
 		}
 
@@ -90,14 +90,14 @@ public class ABCManageEmployee implements IManageEmployee
 			int presentStatus=(int)(Math.random()*10)%2;
 		        if (presentStatus==1)
 			{
-				int workHour=(int)(Math.random()*10);
+				//int workHour=(int)(Math.random()*10);
 				//System.out.println("Employee is present on Day "+i);
 				//System.out.println("Hours Worked : "+(workHour));
-				employee.setMonthWage(employee.getMonthWage()+(employee.getWagePerHour()*workHour));
+				employee.setMonthWage(employee.getMonthWage()+(wagePerHour*workHours));
 			}
 		}
 		System.out.println("Total Month Wage : "+employee.getMonthWage());
-		System.out.println("Total hours worked : "+(employee.getMonthWage()/20));
+		System.out.println("Total hours worked : "+(employee.getMonthWage()/wagePerHour));
 	}
 
 

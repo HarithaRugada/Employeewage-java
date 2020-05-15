@@ -8,16 +8,16 @@ public class IEmployeeWage
 
         public static void main(String[] args)
         {
-                Employee employee=new Employee(20,(int)(Math.random()*10));
+                Employee employee=new Employee();
 
-                IManageEmployee samplemanageemployee=new SampleManageEmployee();
+                IManageEmployee xyzmanageemployee=new XYZManageEmployee();
                 IManageEmployee abcmanageemployee=new ABCManageEmployee();
 
 		System.out.println("Sample Employee");
-		samplemanageemployee.EmployeePresent(employee);
-                samplemanageemployee.EmployeeDailyWage(employee);
-		samplemanageemployee.EmployeeParttime(employee);
-		samplemanageemployee.EmployeeMonthWage(employee);
+		xyzmanageemployee.EmployeePresent(employee);
+                xyzmanageemployee.EmployeeDailyWage(employee);
+		xyzmanageemployee.EmployeeParttime(employee);
+		xyzmanageemployee.EmployeeMonthWage(employee);
 
 
 		System.out.println("<<<<<<<<<<<<<<<<<<<---------------------------------------------->>>>>>>>>>>>>>>>>>>>");
