@@ -12,7 +12,7 @@ public class EmployeeWage
 	{
 
 		System.out.println("Welcome to Employee Wage Computation Program");
-		Employee employee=new Employee(20,(int)(Math.random()*10));
+		Employee employee=new Employee();
                 ManageEmployee manageemployee=new ManageEmployee();
 		Scanner Sc=new Scanner(System.in);
 		System.out.println("Enter your choice");
