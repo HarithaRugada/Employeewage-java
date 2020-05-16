@@ -21,7 +21,9 @@ public class EmployeeWage
 			System.out.println("1.Check whether employee is present or absent");
 			System.out.println("2.Get the daily wage of the employee");
 			System.out.println("3.Check whether the employee is working parttime or fulltime");
-			System.out.println("4.Exit");
+			System.out.println("4.Get the monthly wage");
+			System.out.println("5.Check the condition of 100 total working hours or 20 days");
+			System.out.println("6.exit");
 			int choice=Sc.nextInt();
 			switch(choice)
 			{
@@ -38,7 +40,16 @@ public class EmployeeWage
 					manageemployee.EmployeePresent(employee);
 					manageemployee.EmployeeParttime(employee);
 					break;
+
 				case 4:
+					manageemployee.EmployeeMonthWage(employee);
+					break;
+
+				case 5:
+					manageemployee.EmployeeCondition(employee);
+					break;
+
+				case 6:
 					System.exit(0);
 					break;
 

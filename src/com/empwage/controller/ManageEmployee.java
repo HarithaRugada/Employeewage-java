@@ -84,6 +84,7 @@ public class ManageEmployee
 		for(int i=1;i<=20;i++)
 		{
 			int presentStatus=(int)(Math.random()*10)%2;
+			int workHours=(int)(Math.random()*10)+1;
 		        if (presentStatus==1)
 			{
 				//int workHour=(int)(Math.random()*10)+1;
