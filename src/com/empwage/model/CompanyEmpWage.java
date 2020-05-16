@@ -19,6 +19,52 @@ public class CompanyEmpWage
 
         }
 
+	public String getCompany()
+	{
+		return this.company;
+	}
+
+	public int getEmpwagePerHour()
+	{
+		return this.empwagePerHour;
+	}
+
+	public int getNumberofWorkingDays()
+	{
+		return this.numberofWorkingDays;
+	}
+
+	public int getMaxtotalHours()
+	{
+		return this.maxtotalHours;
+	}
+
+	public int getTotalEmpWage()
+	{
+		return this.totalEmpWage;
+	}
+
+	/*public void setCompany(String company)
+	{
+		this.company=company;
+	}
+
+	public void setEmpWagePerHour(int empWagePerHour)
+	{
+		this.empWagePerHour=empWagePerHour;
+	}
+
+	public void setNumberofWorkingDays(int numberofWorkingDays)
+	{
+		this.numberofWorkingDays=numberofWorkingDays;
+	}
+
+	public void setMaxtotalHours(int maxtotalHours)
+	{
+		this.maxtotalHours=maxtotalHours;
+	}*/
+
+
 	public void setTotalEmpWage(int totalEmpWage)
 	{
 		this.totalEmpWage=totalEmpWage;
@@ -26,7 +72,8 @@ public class CompanyEmpWage
 
 	public String toString()
 	{
-		return "Total Emp Wage for Company" +company+ " is > " +totalEmpWage;
+		return "Total Emp Wage for Company  " +company+ " is > " +totalEmpWage;
 	}
 
 }
+
