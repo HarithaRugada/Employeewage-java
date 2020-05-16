@@ -106,14 +106,14 @@ public class ManageEmployee
                                 int workHour=(int)(Math.random()*10);
 				if((totalWorkhours+workHour)<100)
                                 {
-					days+=1;
+					//days+=1;
 					System.out.println("Employee is present on Day "+days);
                                 	System.out.println("Hours Worked : "+(workHour));
                                 	totalWorkhours+=workHour;
 				}
 
 			}
-
+			days+=1;
 
 		}
 		System.out.println("Total hours Worked : "+totalWorkhours);
