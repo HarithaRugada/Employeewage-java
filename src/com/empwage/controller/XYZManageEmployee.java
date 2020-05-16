@@ -1,13 +1,17 @@
 package com.empwage.controller;
 
 import com.empwage.model.*;
+import com.empwage.controller.*;
 
 import java.util.*;
 
-public class ManageEmployee
+public class XYZManageEmployee implements IManageEmployee
 {
-	int wagePerHour=20;
-	int workHours=(int)(Math.random()*10)+1;
+
+	//private static final int empId=1;
+	private static final int wagePerHour=20;
+	private static final int workHours=8;
+
 	public void EmployeePresent(Employee employee)
 	{
 
@@ -68,7 +72,7 @@ public class ManageEmployee
 			{
 				employee.setIsParttime(false);
 				System.out.println("Fulltime employee");
-				System.out.println("Hours Worked "+workHours);
+				System.out.println("Hours Worked " +workHours);
 			}
 		}
 
@@ -86,9 +90,9 @@ public class ManageEmployee
 			int presentStatus=(int)(Math.random()*10)%2;
 		        if (presentStatus==1)
 			{
-				//int workHour=(int)(Math.random()*10)+1;
-				System.out.println("Employee is present on Day "+i);
-				System.out.println("Hours Worked : "+workHours);
+				//int workHour=(int)(Math.random()*10);
+				//System.out.println("Employee is present on Day "+i);
+				//System.out.println("Hours Worked : "+(workHour));
 				employee.setMonthWage(employee.getMonthWage()+(wagePerHour*workHours));
 			}
 		}
@@ -96,36 +100,32 @@ public class ManageEmployee
 		System.out.println("Total hours worked : "+(employee.getMonthWage()/wagePerHour));
 	}
 
-	public void EmployeeCondition(Employee employee)
+
+	/*public void EmployeeCondition(Employee employee)
 	{
 		int days=1;
 		int totalWorkhours=0;
-		while(days<=20 && totalWorkhours<100)
+		while(days<20 && totalWorkhours<100)
 		{
 			int presentStatus=(int)(Math.random()*10)%2;
-			//System.out.println("Status is "+presentStatus);
                         if (presentStatus==1)
                         {
-                                //int workHour=(int)(Math.random()*10)+1;
-				if((totalWorkhours+workHours)<100)
+                                int workHour=(int)(Math.random()*10);
+				if((totalWorkhours+workHour)<100)
                                 {
-
+					days+=1;
 					System.out.println("Employee is present on Day "+days);
-                                	System.out.println("Hours Worked : "+workHours);
-                                	totalWorkhours+=workHours;
-
+                                	System.out.println("Hours Worked : "+(workHour));
+                                	totalWorkhours+=workHour;
 				}
 
 			}
-			else
-				System.out.println("Employee is absent on Day "+days);
-			days+=1;
 
 
 		}
 		System.out.println("Total hours Worked : "+totalWorkhours);
-		//System.out.println("Total days checked : "+days);
+		System.out.println("Total days worked : "+days);
 
-	}
+	}*/
 
 }
