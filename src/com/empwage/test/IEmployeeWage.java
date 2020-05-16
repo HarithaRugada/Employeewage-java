@@ -37,6 +37,12 @@ public class IEmployeeWage
 		bigc.computeEmpWage();
 		//System.out.println(bigc);
 
+		System.out.println("<<<<<<<<<<<--------------------------------------------------------->>>>>>>>>>>");
+		CompanyEmpWage companyEmpWage=new CompanyEmpWage();
+		EmpWageBuilderArray empWageBuilder=new EmpWageBuilderArray();
+		empWageBuilder.addCompanyEmpWage("Dmart",20,2,10);
+		empWageBuilder.addCompanyEmpWage("Reliance",10,4,20);
+		empWageBuilder.computeEmpWage();
 
         }
 
