@@ -8,6 +8,7 @@ public class CompanyEmpWage
         public final int numberofWorkingDays;
         public final int maxtotalHours;
         public int totalEmpWage;
+	public int totalSalary;
 
         public CompanyEmpWage(String company,int empwagePerHour,int numberofWorkingDays,int maxtotalHours)
         {
@@ -64,6 +65,10 @@ public class CompanyEmpWage
 		this.maxtotalHours=maxtotalHours;
 	}*/
 
+	public void setTotalSalary(int totalSalary)
+	{
+		this.totalSalary=totalSalary;
+	}
 
 	public void setTotalEmpWage(int totalEmpWage)
 	{
