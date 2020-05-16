@@ -33,6 +33,7 @@ public class EmployeeWageTest
 		System.out.println("<<<<<<<<<<<<------------------------------------------->>>>>>>>>>>>");
 
 		EmpWageBuilder empwagebuilder=new EmpWageBuilder();
+
 		CompanyEmpWage dmart= new CompanyEmpWage("D Mart",20,5,10);
 		CompanyEmpWage reliance=new CompanyEmpWage("Reliance",10,10,20);
 
@@ -41,6 +42,14 @@ public class EmployeeWageTest
 
 		empwagebuilder.computeEmpWage(reliance);
 		System.out.println(reliance);
+
+		System.out.println("<<<<<<<<<<<----------------->>>>>>>>>>>");
+
+		EmpWageBuilderArray empWageBuilder=new EmpWageBuilderArray();
+		empWageBuilder.addCompanyEmpWage("DMart",20,2,10);
+		empWageBuilder.addCompanyEmpWage("Reliance",10,4,20);
+		empWageBuilder.computeEmpWage();
+
 
         }
 
