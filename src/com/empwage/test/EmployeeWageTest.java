@@ -57,6 +57,15 @@ public class EmployeeWageTest
 		empwagebuilderarray.addCompanyEmpWage("Myntra",25,7,30);
 		empwagebuilderarray.computeEmpWage();
 
+		System.out.println("<<<<<<<<--------------FINAL-------------------->>>>>>>>");
+		//IEmpWage empwagebuilder=new EmpWageBuilderArray();
+                //empwagebuilder.addCompanyEmpWage("Amazon",15,5,25);
+                //empwagebuilder.addCompanyEmpWage("Flipkart",20,4,28);
+                //empwagebuilder.addCompanyEmpWage("Myntra",25,7,30);
+                //empwagebuilder.computeEmpWage();
+
+
+		System.out.println("Total Wage for Amazon Company : "+empwagebuilderarray.getTotalWage("Amazon"));
         }
 
 }
