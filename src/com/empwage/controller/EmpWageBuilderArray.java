@@ -1,8 +1,8 @@
 package com.empwage.controller;
 
 import com.empwage.model.*;
-
-public class EmpWageBuilderArray
+import com.empwage.controller.*;
+public class EmpWageBuilderArray implements IEmpWage
 {
 
 	private int numofCompanies=0;

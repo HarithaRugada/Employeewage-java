@@ -50,6 +50,12 @@ public class EmployeeWageTest
 		empWageBuilder.addCompanyEmpWage("Reliance",10,4,20);
 		empWageBuilder.computeEmpWage();
 
+		System.out.println("<--------Interface Approach--------->");
+		IEmpWage empwagebuilderarray=new EmpWageBuilderArray();
+		empwagebuilderarray.addCompanyEmpWage("Amazon",15,5,25);
+		empwagebuilderarray.addCompanyEmpWage("Flipkart",20,4,28);
+		empwagebuilderarray.addCompanyEmpWage("Myntra",25,7,30);
+		empwagebuilderarray.computeEmpWage();
 
         }
 
